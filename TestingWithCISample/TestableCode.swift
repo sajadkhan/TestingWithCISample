@@ -27,7 +27,7 @@ class TestableCode {
     
     func parseSomeHeavyJson() {
         let fileURL = Bundle.main.url(forResource: "bigJson", withExtension: ".json")
-        let jsonData: Data? = try? Data(contentsOf: fileURL!)
+        let jsonData: Data? = nil // = try? Data(contentsOf: fileURL!)
         _ = try? JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions.mutableLeaves)
         //print("parsed json = \(jsonParsed)")
     }
